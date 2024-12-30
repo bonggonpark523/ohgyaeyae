@@ -155,11 +155,14 @@ class SlotMachine {
     
     const combinedFace = document.querySelector('.combined-face');
     combinedFace.style.overflow = 'visible';
+    
+    // 여기서 이미지 URL을 수정
+    const baseUrl = "https://raw.githubusercontent.com/bonggonpark523/ohgyaeyae/main/";
     combinedFace.innerHTML = `
       <div style="display: flex; flex-direction: column; height: 100%;">
-        <img src="${this.selections.eyes}?raw=true" alt="눈" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -10pt) scale(1.3);">
-        <img src="${this.selections.nose}?raw=true" alt="코" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -20pt) scale(1.3);">
-        <img src="${this.selections.mouth}?raw=true" alt="" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -5pt) scale(1.05);">
+        <img src="${baseUrl}${this.selections.eyes.split('/').pop()}" alt="눈" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -10pt) scale(1.3);">
+        <img src="${baseUrl}${this.selections.nose.split('/').pop()}" alt="코" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -20pt) scale(1.3);">
+        <img src="${baseUrl}${this.selections.mouth.split('/').pop()}" alt="" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -5pt) scale(1.05);">
       </div>
     `;
 
