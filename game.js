@@ -156,16 +156,11 @@ class SlotMachine {
     const combinedFace = document.querySelector('.combined-face');
     combinedFace.style.overflow = 'visible';
     
-    // 상대 경로로 이미지 URL 수정
-    const getFileName = (path) => {
-      return './' + path.split('/').pop();
-    };
-
     combinedFace.innerHTML = `
       <div style="display: flex; flex-direction: column; height: 100%;">
-        <img src="${getFileName(this.selections.eyes)}" alt="눈" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -10pt) scale(1.3);">
-        <img src="${getFileName(this.selections.nose)}" alt="코" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -20pt) scale(1.3);">
-        <img src="${getFileName(this.selections.mouth)}" alt="" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -5pt) scale(1.05);">
+        <img src="${this.selections.eyes}" alt="눈" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -10pt) scale(1.3);">
+        <img src="${this.selections.nose}" alt="코" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -20pt) scale(1.3);">
+        <img src="${this.selections.mouth}" alt="" style="flex: 1; margin: 0; padding: 0; transform: translate(-120px, -5pt) scale(1.05);">
       </div>
     `;
 
