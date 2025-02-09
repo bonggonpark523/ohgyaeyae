@@ -191,11 +191,11 @@ class SlotMachine {
         
         // 랜덤 메시지 배열 추가
         const messages = [
-            '내가 뭐 잘못한거 있어?',
-            '나한테 왜그래?',
-            '표정이 왜그래?',
-            '무슨일 있어?',
-            '넌 이상한 애구나'
+            'Qu\'est-ce que j\'ai fait de mal?',
+            'Pourquoi tu fais ça?',
+            'Pourquoi cette expression?',
+            'Y a-t-il un problème?',
+            'Tu es un peu bizarre.'
         ];
         
         // 랜덤하게 하나의 메시지 선택
