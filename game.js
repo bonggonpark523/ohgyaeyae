@@ -18,9 +18,9 @@ class SlotMachine {
   toggleSlot(part) {
     const btn = document.querySelector(`[data-part="${part}"]`);
     
-    if (btn.textContent === '시작') {
+    if (btn.textContent === 'Démarrer') {
         this.startSlot(part);
-        btn.textContent = '멈춤';
+        btn.textContent = 'Pause';
     } else {
         clearInterval(this.intervals[part]);
         
@@ -65,7 +65,7 @@ class SlotMachine {
         // 모든 버튼이 '완료' 상태인지 확인
         const allComplete = this.parts.every(p => {
             const button = document.querySelector(`[data-part="${p}"]`);
-            return button.textContent === '완료';
+            return button.textContent === 'FIn';
         });
         
         if (allComplete) {
@@ -192,11 +192,11 @@ class SlotMachine {
         
         // 랜덤 메시지 배열 추가
         const messages = [
-            '내가 뭐 잘못한거 있어?',
-            '나한테 왜그래?',
-            '표정이 왜그래?',
-            '무슨일 있어?',
-            '넌 이상한 애구나'
+            'Ai-je fait quelque chose de mal ?',
+            'Qu'est-ce qui ne va pas chez moi ?',
+            'Qu'est-ce qui ne va pas avec ton visage ?',
+            'Qu'est-ce qui se passe ?',
+            'Tu es bizarre'
         ];
         
         // 랜덤하게 하나의 메시지 선택
