@@ -59,13 +59,13 @@ class SlotMachine {
         // 선택된 이미지 저장
         this.selections[part] = selectedImg.src;
         
-        btn.textContent = '완료';
+        btn.textContent = 'Fin';
         btn.disabled = true;
         
         // 모든 버튼이 '완료' 상태인지 확인
         const allComplete = this.parts.every(p => {
             const button = document.querySelector(`[data-part="${p}"]`);
-            return button.textContent === 'FIn';
+            return button.textContent === 'Fin';
         });
         
         if (allComplete) {
