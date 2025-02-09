@@ -18,9 +18,9 @@ class SlotMachine {
   toggleSlot(part) {
     const btn = document.querySelector(`[data-part="${part}"]`);
     
-    if (btn.textContent === '시작') {
+    if (btn.textContent === 'Démarrer') {
         this.startSlot(part);
-        btn.textContent = '멈춤';
+        btn.textContent = 'Pause';
     } else {
         clearInterval(this.intervals[part]);
         
@@ -59,13 +59,13 @@ class SlotMachine {
         // 선택된 이미지 저장
         this.selections[part] = selectedImg.src;
         
-        btn.textContent = '완료';
+        btn.textContent = 'Fin';
         btn.disabled = true;
         
         // 모든 버튼이 '완료' 상태인지 확인
         const allComplete = this.parts.every(p => {
             const button = document.querySelector(`[data-part="${p}"]`);
-            return button.textContent === '완료';
+            return button.textContent === 'Fin';
         });
         
         if (allComplete) {
