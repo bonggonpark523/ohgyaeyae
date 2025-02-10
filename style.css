@@ -299,7 +299,8 @@ body {
 
 #eyes-row .control-btn {
     position: absolute;  /* 절대 위치로 설정 */
-    right: -220px;  /* 오른쪽에서 10px 떨어진 위치로 설정 */
+    right: -250px;  /* 오른쪽에서 10px 떨어진 위치로 설정 */
     bottom: 40px;  /* 아래쪽에서 10px 떨어진 위치로 설정 */
 }
+
 
