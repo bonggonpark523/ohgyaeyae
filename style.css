@@ -70,7 +70,7 @@ body {
   position: absolute;
   right: 100px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-40px);
   width: 270px;
   height: 450px;
   display: flex;
@@ -103,7 +103,7 @@ body {
   position: absolute;
   left: 100px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-40px);
   width: auto;  /* 너비를 auto로 설정 */
   height: 450px;  /* 높이만 지정 */
   z-index: 1;
@@ -125,14 +125,14 @@ body {
 
 .left-bubble {
   left: 30%;
-  transform: translateX(-180%);
+  transform: translateX(-200%);
   top: 35%;
   z-index: 2;
 }
 
 .right-bubble {
   left: 50%;
-  transform: translateX(-15%);
+  transform: translateX(-50%);
   top: 55%;
   z-index: 2;
 }
